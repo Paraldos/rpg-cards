@@ -1,6 +1,7 @@
 import "./style.css";
 import Card from "./card.js";
 import Page from "./page.js";
+import CharacterSheetPage from "./character-sheet-page.js";
 
 import ausruestungUrl from "./assets/PSI RP - Ausruestung.tsv?url";
 import hintergruendeUrl from "./assets/PSI RP - Hintergründe.tsv?url";
@@ -37,6 +38,9 @@ async function main() {
   console.log("Gesamt:", data.length, "Einträge");
 
   document.body.innerHTML = "";
+
+  const characterSheetPage = new CharacterSheetPage();
+  document.body.appendChild(characterSheetPage.render());
 
   for (let i = 0; i < data.length; i += 10) {
     const pageData = data.slice(i, i + 10);

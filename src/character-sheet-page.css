@@ -1,0 +1,265 @@
+.character-sheet-page {
+  place-items: stretch;
+}
+
+.character-sheet-spread {
+  width: 297mm;
+  height: 210mm;
+  display: grid;
+  grid-template-columns: 148.5mm 148.5mm;
+}
+
+.character-sheet {
+  width: 148.5mm;
+  height: 210mm;
+  box-sizing: border-box;
+  border: 0.6mm solid #2b2b2b;
+  box-shadow:
+    inset 0 0 0 1.8mm #fff,
+    inset 0 0 0 2.1mm #555;
+  background: #fff;
+
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.character-sheet + .character-sheet {
+  border-left: 0;
+}
+
+.sheet-inner {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5mm;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 15px;
+  font-family: "EB Garamond", serif;
+  color: #1f1b17;
+}
+
+.sheet-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 0.3mm solid #8b7f73;
+  padding-bottom: 1mm;
+}
+
+.sheet-header h1,
+.sheet-block h2,
+.attribute-head h3 {
+  font-family: "Cinzel", serif;
+}
+
+.attributes-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 0.2mm solid #b5aca2;
+  margin-bottom: 1.2mm;
+}
+
+.sheet-header h1 {
+  font-size: 14pt;
+  letter-spacing: 0.25mm;
+  text-transform: uppercase;
+}
+
+.sheet-block {
+  border: 0.3mm solid #8b7f73;
+  padding: 1.7mm;
+  background: #fff;
+}
+
+.sheet-block h2 {
+  font-size: 9.3pt;
+  letter-spacing: 0.1mm;
+  text-transform: uppercase;
+  padding-bottom: 0.6mm;
+}
+
+.field-grid {
+  display: grid;
+  gap: 1mm;
+}
+
+.character-data-grid {
+  display: grid;
+  grid-template-columns: 1fr 36mm;
+  gap: 2mm;
+  align-items: start;
+}
+
+.data-meta {
+  border-left: 0.2mm solid #c9c0b8;
+  padding-left: 1.6mm;
+}
+
+.field-row,
+.gold-row,
+.damage-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.4mm;
+}
+
+.field-label {
+  width: 19mm;
+  font-size: 8.1pt;
+  text-transform: uppercase;
+}
+
+.line-fill {
+  flex: 1;
+  height: 0;
+  border-bottom: 0.32mm solid #4a443d;
+}
+
+.section-note {
+  font-size: 8pt;
+  margin-bottom: 1mm;
+}
+
+.attribute-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2mm;
+}
+
+.attribute-row {
+  border: 0.2mm solid #c9c0b8;
+  padding: 1.2mm;
+  background: #fff;
+}
+
+.attribute-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 1mm;
+}
+
+.marker {
+  width: 2.1mm;
+  height: 2.1mm;
+  border-radius: 50%;
+  border: 0.2mm solid #4a443d;
+}
+
+.attribute-head h3 {
+  font-size: 8.6pt;
+  text-transform: uppercase;
+}
+
+.base {
+  font-size: 7.2pt;
+  text-transform: uppercase;
+  color: #4c4a45;
+}
+
+.value-line {
+  width: 11mm;
+  border-bottom: 0.32mm solid #4a443d;
+  align-self: end;
+}
+
+.attribute-row p {
+  font-size: 7.6pt;
+  line-height: 1.2;
+  margin-top: 1mm;
+}
+
+.is-staerke .marker {
+  background: #c63b3b;
+}
+
+.is-geschick .marker {
+  background: #3aa655;
+}
+
+.is-gerissenheit .marker {
+  background: #e0c21b;
+}
+
+.is-charisma .marker {
+  background: #8e44ad;
+}
+
+.is-weisheit .marker {
+  background: #2e86c1;
+}
+
+.sheet-lower-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+}
+
+.attributes-lower {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+}
+
+.equipped {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.inventory {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.damage-boxes {
+  display: flex;
+  gap: 0.8mm;
+}
+
+.mark-box.circle {
+  width: 3.8mm;
+  height: 3.8mm;
+  border: 0.3mm solid #2f2a24;
+  border-radius: 50%;
+}
+
+.hint {
+  font-size: 7.3pt;
+  margin: 0.7mm 0;
+}
+
+.gold-row span:first-child,
+.damage-row span:first-child {
+  font-size: 8pt;
+  text-transform: uppercase;
+}
+
+.equipped ol,
+.inventory ol {
+  margin: 0;
+  padding: 0;
+}
+
+.equipped li,
+.inventory li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1mm;
+  margin-bottom: 0.9mm;
+}
+
+.list-index {
+  font-size: 7.1pt;
+  width: 3.6mm;
+  text-align: right;
+}
+
+@media print {
+  .character-sheet-page {
+    page-break-after: always;
+    break-after: page;
+  }
+}
