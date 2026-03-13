@@ -1,0 +1,77 @@
+.card {
+  width: 57mm;
+  height: 89mm;
+  box-sizing: border-box;
+  padding: 4mm;
+
+  border: 0.6mm solid #2b2b2b;
+  border-radius: 2mm;
+
+  position: relative;
+  text-align: center;
+
+  overflow: hidden;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 1.5mm;
+  right: 1.5mm;
+  bottom: 1.5mm;
+  left: 1.5mm;
+  border: 0.3mm solid #555;
+  border-radius: 1.2mm;
+  pointer-events: none;
+}
+
+.card h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  font-size: 11pt;
+  line-height: 1.1;
+  letter-spacing: 0.2mm;
+  text-transform: uppercase;
+  margin: 0 0 2mm 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.card h3::after {
+  content: "";
+  display: block;
+  width: 60%;
+  margin: 1.5mm auto 0 auto;
+  border-bottom: 0.3mm solid #777;
+}
+
+.card > p:first-of-type {
+  font-family: "EB Garamond", serif;
+  font-size: 9pt;
+  font-style: italic;
+  margin: 0 0 2mm 0;
+}
+
+.card-passive,
+.card-active {
+  border-top: 0.3mm solid #bbb;
+  padding-top: 1.5mm;
+  margin-top: 1.5mm;
+  text-align: center;
+}
+
+.card h4 {
+  font-family: "Cinzel", serif;
+  font-size: 9pt;
+  letter-spacing: 0.1mm;
+  margin: 0 0 1mm 0;
+}
+
+.card p {
+  font-family: "EB Garamond", serif;
+  font-size: 8.5pt;
+  line-height: 1.15;
+  margin: 0 0 1mm 0;
+}

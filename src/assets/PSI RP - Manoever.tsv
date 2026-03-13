@@ -1,0 +1,33 @@
+Name	Type	Passive: Attribut	Extra Passive	Aktiv
+Todesstoß	Rune			Aktion: Führe eine Nahkampfattacke aus. Bei Erfolg erleidet das Ziel 2 Wunden.
+Blattschuss	Rune			Aktion: Führe eine Fernkampfattacke aus. Bei Erfolg erleidet das Ziel 2 Wunden.
+Finte	Rune			Erhalte Vorteil auf eine Nahkampfattacke.
+Zielen	Rune			Erhalte Vorteil auf eine Fernkampfattacke.
+Ausweichen	Rune			Erhalte Vorteil auf deine Verteidigungsprobe.
+Rundumschlag	Rune			Aktion: Führe eine Attacke gegen jedes Ziel in Nahkampfreichweite aus.
+Kampfrausch	Rune			Aktion: Führe zwei Attacken aus.
+Weitschuss	Rune			Aktion: Führe eine Fernkampfattacke mit doppelter Reichweite aus.
+Inspirieren	Rune			Ein Verbündeter erhält Vorteil auf seine nächste Probe.
+Sturmangriff	Rune			Aktion: Bewege dich bis zu 6 Meter und führe danach eine Nahkampfattacke mit Vorteil aus.
+				
+Teleport	Rune			Aktion: Versetze dich an einen Ort, den du sehen kannst oder in den letzten 24 Stunden besucht hast.
+Botschaft	Rune			Sende eine Gedankennachricht an jemanden, den du kennst.
+Hellsicht	Rune			Der Erzähler beantwortet dir drei Ja/Nein-Fragen.
+Unsichtbarkeit	Rune			Du wirst unsichtbar. Die Wirkung hält an, solange du dich unauffällig verhältst.
+Explosion	Rune			Aktion: Würfle eine Magieattacke. Jeder in einem bis zu 6 m großen Radius erleidet eine Wunde.
+Barriere	Rune			Aktion: Beschwöre eine undurchdringliche Barriere von bis zu 3x3 m. Hält 5 Minuten.
+Dunkelheit	Rune			Aktion: Erzeuge ein Gebiet absoluter Dunkelheit mit bis zu 6 m Durchmesser. Hält 5 Minuten.
+Stille	Rune			Aktion: Erzeuge ein Gebiet absoluter Stille mit bis zu 6 m Durchmesser. Hält 5 Minuten.
+Verschmelzen	Rune			Du verschmilzt mit einer großen Pflanze oder mehreren Quadratmetern Erde. Du kannst deine Umgebung grob Warhnehmen.
+Entzücken	Rune			Du erhältst Vorteil auf alle sozialen Proben. Hält 1 Stunde.
+Festigen	Rune			Berührung: Das Ziel erhält +2 auf ein von dir gewähltes Attribut. Hält 5 Minuten.
+Hast	Rune			Berührung: Das Ziel bewegt sich mit doppelter Geschwindigkeit und erhält Vorteil auf alle Athletik- und Akrobatikproben. Hält 30 Minuten.
+Heilung	Rune			Berührung: Das Ziel heilt eine Wunde.
+Hypnose	Rune			Du gibst dem Ziel einen Befehl, den es befolgen muss. Hält bis zu 10 Minuten. Gefährliche Befehle sind nicht möglich.
+Illusion	Rune			Erzeuge ein überzeugendes Phantom (Geräusch, Geruch oder Bild) von bis zu 3 m³ Größe.
+Levitation	Rune			Du kannst durch die Luft schweben. Hält 5 Minuten.
+Mimik	Rune			Du nimmst Aussehen und Stimme einer anderen Person an (einschließlich Kleidung). Hält 1 Stunde.
+Nebel	Rune			Aktion: Du verwandelst dich in Nebel. Hält bis zu 5 Minuten. In Nebelform kannst du schweben, dich durch enge Räume zwängen und bist immun gegen körperliche Angriffe.
+Objekt Lesen	Rune			Berührung: Du erkennst sofort, wozu ein Gegenstand dient.
+Schild	Rune			Reaktion: Ignoriere die Wirkung eines Angriffs.
+Telekinese	Rune			Aktion: Bewege einen Gegenstand von bis zu 10 kg mit der Kraft deiner Gedanken.

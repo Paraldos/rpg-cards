@@ -2,21 +2,39 @@ import "./style.css";
 import Card from "./card.js";
 import Page from "./page.js";
 
-async function loadCSV() {
-  const response = await fetch("/src/assets/PSI RP - Hintergründe.tsv");
+import ausruestungUrl from "./assets/PSI RP - Ausruestung.tsv?url";
+import hintergruendeUrl from "./assets/PSI RP - Hintergründe.tsv?url";
+import manoeverUrl from "./assets/PSI RP - Manoever.tsv?url";
+
+async function loadTSV(path) {
+  const response = await fetch(path);
+
+  if (!response.ok) {
+    throw new Error(`Fehler beim Laden von ${path}: ${response.status}`);
+  }
+
   const text = await response.text();
 
-  const rows = text
+  return text
     .trim()
     .split("\n")
-    .map((row) => row.split("\t"));
+    .map((row) => row.replace(/\r$/, "").split("\t"));
+}
 
-  return rows;
+async function loadTSVFiles() {
+  const files = [ausruestungUrl, hintergruendeUrl, manoeverUrl];
+
+  const allData = await Promise.all(files.map(loadTSV));
+
+  return allData
+    .flatMap((rows) => rows.slice(1))
+    .filter((row) => row.some((cell) => cell && cell.trim() !== ""));
 }
 
 async function main() {
-  const data = await loadCSV();
-  data.shift();
+  const data = await loadTSVFiles();
+
+  console.log("Gesamt:", data.length, "Einträge");
 
   document.body.innerHTML = "";
 
@@ -33,4 +51,4 @@ async function main() {
   }
 }
 
-main();
+main().catch(console.error);
