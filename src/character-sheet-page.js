@@ -56,22 +56,22 @@ export default class CharacterSheetPage {
         <div class="sheet-block character-data">
           <h2>Charakterdaten</h2>
           <div class="character-data-grid">
-            <div class="field-grid">
-              ${this.createFieldRows(["Name", "Konzept", "Herkunft", "Motivation"])}
-            </div>
-            <div class="data-meta">
-              <div class="damage-row">
-                <span>Schaden:</span>
-                <div class="damage-boxes" aria-label="5 Schadenstufen">${this.createBoxes(5, "circle")}</div>
-              </div>
-              <p class="hint">Kampfunfähig bei 5 Schaden.</p>
-              <div class="gold-row">
-                <span>Gold:</span>
-                <span class="line-fill" aria-hidden="true"></span>
-              </div>
-            </div>
+            ${this.createFieldRows(["Name", "Konzept", "Herkunft", "Motivation"])}
           </div>
         </div>
+
+        <section class="sheet-block damage-gold-box">
+          <h2>Schaden & Gold</h2>
+          <div class="damage-row">
+            <span>Schaden:</span>
+            <div class="damage-boxes" aria-label="5 Schadenstufen">${this.createBoxes(5, "circle")}</div>
+            <span class="hint">Kampfunfähig bei 5 Schaden.</span>
+          </div>
+          <div class="gold-row">
+            <span>Gold:</span>
+            <span class="line-fill" aria-hidden="true"></span>
+          </div>
+        </section>
 
         <section class="sheet-lower-grid">
           <div class="sheet-block attributes-lower">

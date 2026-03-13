@@ -32,7 +32,7 @@
   box-sizing: border-box;
   padding: 5mm;
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   gap: 15px;
   font-family: "EB Garamond", serif;
   color: #1f1b17;
@@ -86,14 +86,9 @@
 
 .character-data-grid {
   display: grid;
-  grid-template-columns: 1fr 36mm;
-  gap: 2mm;
+  grid-template-columns: 1fr;
+  gap: 1mm;
   align-items: start;
-}
-
-.data-meta {
-  border-left: 0.2mm solid #c9c0b8;
-  padding-left: 1.6mm;
 }
 
 .field-row,
@@ -102,6 +97,20 @@
   display: flex;
   align-items: baseline;
   gap: 1.4mm;
+}
+
+.damage-gold-box {
+  display: grid;
+  gap: 1.2mm;
+}
+
+.damage-gold-box .damage-row {
+  align-items: center;
+}
+
+.damage-gold-box .hint {
+  margin: 0;
+  margin-left: auto;
 }
 
 .field-label {
