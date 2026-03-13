@@ -2,7 +2,7 @@
   width: 57mm;
   height: 89mm;
   box-sizing: border-box;
-  padding: 4mm;
+  padding: 5mm;
 
   border: 0.6mm solid #2b2b2b;
   border-radius: 2mm;
@@ -13,18 +13,15 @@
   overflow: hidden;
   break-inside: avoid;
   page-break-inside: avoid;
-}
 
-.card::before {
-  content: "";
-  position: absolute;
-  top: 1.5mm;
-  right: 1.5mm;
-  bottom: 1.5mm;
-  left: 1.5mm;
-  border: 0.3mm solid #555;
-  border-radius: 1.2mm;
-  pointer-events: none;
+  background: white;
+
+  box-shadow:
+    inset 0 0 0 1.8mm white,
+    inset 0 0 0 2.1mm #555;
+
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .card h3 {
@@ -51,15 +48,13 @@
   font-family: "EB Garamond", serif;
   font-size: 9pt;
   font-style: italic;
-  margin: 0 0 2mm 0;
+  margin: 0 0 6mm 0;
 }
 
 .card-passive,
 .card-active {
-  border-top: 0.3mm solid #bbb;
-  padding-top: 1.5mm;
-  margin-top: 1.5mm;
   text-align: center;
+  margin-bottom: 4mm;
 }
 
 .card h4 {
@@ -80,6 +75,9 @@
   font-weight: 600;
   border-radius: 3px;
   padding: 1mm;
+
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 /* Stärke */

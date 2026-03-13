@@ -49,7 +49,7 @@ export default class Card {
 
     card.innerHTML = `
       <h3>${this.data[0] ?? ""}</h3>
-      <p>${this.data[1] ?? ""}</p>
+      <p class="card-type">Typ: ${this.data[1] ?? ""}</p>
       ${passive}
       ${active}
     `;
