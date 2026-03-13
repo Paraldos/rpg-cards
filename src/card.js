@@ -5,16 +5,34 @@ export default class Card {
     this.data = data;
   }
 
+  getAttributeClass(text) {
+    if (!text) return "";
+
+    const attr = text.split(" ")[0].toLowerCase();
+
+    const map = {
+      stärke: "attr-staerke",
+      geschick: "attr-geschick",
+      gerissenheit: "attr-gerissenheit",
+      charisma: "attr-charisma",
+      weisheit: "attr-weisheit",
+    };
+
+    return map[attr] ?? "";
+  }
+
   render() {
     const card = document.createElement("div");
     card.className = "card";
+
+    const attrClass = this.getAttributeClass(this.data[2]);
 
     const passive =
       this.data[2] || this.data[3]
         ? `
         <div class="card-passive">
           <h4>Passive</h4>
-          ${this.data[2] ? `<p>${this.data[2]}</p>` : ""}
+          ${this.data[2] ? `<p class="attr ${attrClass}">${this.data[2]}</p>` : ""}
           ${this.data[3] ? `<p>${this.data[3]}</p>` : ""}
         </div>
       `
@@ -31,8 +49,7 @@ export default class Card {
 
     card.innerHTML = `
       <h3>${this.data[0] ?? ""}</h3>
-      <p>Type: ${this.data[1] ?? ""}</p>
-
+      <p>${this.data[1] ?? ""}</p>
       ${passive}
       ${active}
     `;
