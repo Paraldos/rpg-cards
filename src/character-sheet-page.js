@@ -48,37 +48,26 @@ export default class CharacterSheetPage {
     sheet.setAttribute("aria-label", `Charakterbogen ${index}`);
 
     sheet.innerHTML = `
-      <div class="sheet-inner">
-        <header class="sheet-header">
-          <h1>Charakterbogen</h1>
-        </header>
+		<h1>Charakterbogen</h1>
 
         <div class="sheet-block character-data">
           <h2>Charakterdaten</h2>
-          <div class="character-data-grid">
-            ${this.createFieldRows(["Name", "Konzept", "Herkunft", "Motivation"])}
-          </div>
+		  ${this.createCharacterDataRow(["Name", "Konzept", "Motivation"])}
         </div>
 
-        <section class="sheet-block damage-gold-box">
+        <section class="sheet-block damage-box">
           <h2>Schaden & Gold</h2>
           <div class="damage-row">
-            <span>Schaden:</span>
-            <div class="damage-boxes" aria-label="5 Schadenstufen">${this.createBoxes(5, "circle")}</div>
-            <span class="hint">Kampfunfähig bei 5 Schaden.</span>
-          </div>
-          <div class="gold-row">
-            <span>Gold:</span>
-            <span class="line-fill" aria-hidden="true"></span>
+            <span class="field-label">Schaden:</span>
+            <div class="damage-boxes">${this.createBoxes(5, "circle")}</div>
+            <span class="field-label">Gold:</span>
+            <span class="field-line"></span>
           </div>
         </section>
 
         <section class="sheet-lower-grid">
           <div class="sheet-block attributes-lower">
-            <div class="attributes-header">
-              <h2>Attribute</h2>
-              <p class="section-note">Alle Attribute starten mit 10 Punkten.</p>
-            </div>
+			<h2>Attribute</h2>
             <div class="attribute-list">${this.createAttributeRows()}</div>
           </div>
 
@@ -92,19 +81,18 @@ export default class CharacterSheetPage {
             <ol>${this.createNumberedLines(10)}</ol>
           </div>
         </section>
-      </div>
     `;
 
     return sheet;
   }
 
-  createFieldRows(labels) {
+  createCharacterDataRow(labels) {
     return labels
       .map(
         (label) => `
-          <div class="field-row">
+          <div class="character-data-row">
             <span class="field-label">${label}</span>
-            <span class="line-fill" aria-hidden="true"></span>
+            <span class="field-line" aria-hidden="true"></span>
           </div>
         `,
       )
@@ -115,26 +103,29 @@ export default class CharacterSheetPage {
     return ATTRIBUTES.map(
       (attribute) => `
         <article class="attribute-row ${attribute.className}">
-          <div class="attribute-head">
-            <span class="marker" aria-hidden="true"></span>
-            <h3>${attribute.name}</h3>
-            <span class="base">Start 10</span>
-            <span class="value-line" aria-label="Aktueller Wert"></span>
-          </div>
-          <p>${attribute.note}</p>
+        	<div class="attribute-text">
+				<span class="marker" aria-hidden="true"></span>
+				<h3>${attribute.name}</h3>
+				<p>${attribute.note}</p>
+			</div>
+			<span class="attribute-value" aria-label="Aktueller Wert"></span>
         </article>
       `,
     ).join("");
   }
 
   createBoxes(count, shape) {
-    return Array.from({ length: count }, () => `<span class="mark-box ${shape}"></span>`).join("");
+    return Array.from(
+      { length: count },
+      () => `<span class="mark-box ${shape}"></span>`,
+    ).join("");
   }
 
   createNumberedLines(count) {
     return Array.from(
       { length: count },
-      (_, index) => `<li><span class="list-index">${index + 1}</span><span class="line-fill" aria-hidden="true"></span></li>`,
+      (_, index) =>
+        `<li><span class="list-index">${index + 1}</span><span class="line-fill" aria-hidden="true"></span></li>`,
     ).join("");
   }
 

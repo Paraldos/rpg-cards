@@ -6,52 +6,68 @@
   width: 297mm;
   height: 210mm;
   display: grid;
-  grid-template-columns: 148.5mm 148.5mm;
+  grid-template-columns: 1fr 1fr;
 }
 
 .character-sheet {
-  width: 148.5mm;
-  height: 210mm;
   box-sizing: border-box;
   position: relative;
+  padding: 5mm;
+
   border: 0.6mm solid #2b2b2b;
   background: #fff;
 
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
-}
 
-.character-sheet::before {
-  content: "";
-  position: absolute;
-  inset: 2.1mm;
-  border: 0.35mm solid #555;
-  pointer-events: none;
-}
-
-.sheet-inner {
-  height: 100%;
-  box-sizing: border-box;
-  padding: 5mm;
   display: grid;
   grid-template-rows: auto auto auto 1fr;
-  gap: 2.3mm;
+  gap: 5mm;
   font-family: "EB Garamond", serif;
   color: #1f1b17;
 }
 
-.sheet-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  border-bottom: 0.3mm solid #8b7f73;
-  padding-bottom: 1mm;
+.sheet-block {
+  border: 0.3mm solid #8b7f73;
+  padding: 2mm;
+  background: #fff;
 }
 
-.sheet-header h1,
-.sheet-block h2,
-.attribute-head h3 {
+.character-sheet h1,
+.character-sheet h2,
+.character-sheet h3 {
   font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.sheet-header h1 {
+  font-family: "Cinzel", serif;
+  font-size: 12pt;
+  line-height: 1.1;
+  letter-spacing: 0.22mm;
+}
+
+.sheet-block h2 {
+  font-family: "Cinzel", serif;
+  font-size: 9.5pt;
+  line-height: 1.15;
+  letter-spacing: 0.12mm;
+
+  padding-bottom: 2mm;
+}
+
+.attribute-text h3 {
+  font-family: "Cinzel", serif;
+  font-size: 8.5pt;
+  line-height: 1.2;
+  letter-spacing: 0.06mm;
+}
+
+.sheet p {
+  font-family: "EB Garamond", serif;
+  font-size: 8pt;
+  line-height: 1.25;
 }
 
 .attributes-header {
@@ -62,43 +78,28 @@
   margin-bottom: 1.2mm;
 }
 
-.sheet-header h1 {
-  font-size: 14pt;
-  letter-spacing: 0.25mm;
-  text-transform: uppercase;
-}
-
-.sheet-block {
-  border: 0.3mm solid #8b7f73;
-  padding: 1.7mm;
-  background: #fff;
-}
-
-.sheet-block h2 {
-  font-size: 9.3pt;
-  letter-spacing: 0.1mm;
-  text-transform: uppercase;
-  padding-bottom: 0.6mm;
-}
-
-.field-grid {
+.character-data-row {
   display: grid;
-  gap: 1mm;
+  grid-template-columns: auto 1fr;
+  gap: 10mm;
 }
 
-.character-data-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1mm;
-  align-items: start;
+.field-label {
+  width: 19mm;
+  font-size: 8.1pt;
+  text-transform: uppercase;
+  align-self: center;
 }
 
-.field-row,
-.gold-row,
+.field-line {
+  border-bottom: 1px solid black;
+  height: 7mm;
+  width: 100%;
+}
+
 .damage-row {
   display: flex;
-  align-items: baseline;
-  gap: 1.4mm;
+  gap: 4mm;
 }
 
 .damage-gold-box {
@@ -113,12 +114,6 @@
 .damage-gold-box .hint {
   margin: 0;
   margin-left: auto;
-}
-
-.field-label {
-  width: 19mm;
-  font-size: 8.1pt;
-  text-transform: uppercase;
 }
 
 .line-fill {
@@ -145,16 +140,31 @@
 }
 
 .attribute-row {
-  border: 0.2mm solid #c9c0b8;
   padding: 1.2mm;
   background: #fff;
+  margin-bottom: 2mm;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
-.attribute-head {
+.attribute-text {
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 1mm;
+}
+
+.attribute-text p {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 7.6pt;
+}
+
+.attribute-value {
+  width: 10mm;
+  height: 10mm;
+  border: 0.5mm solid #4a443d;
+  border-radius: 50mm;
 }
 
 .marker {
@@ -162,29 +172,6 @@
   height: 2.1mm;
   border-radius: 50%;
   border: 0.2mm solid #4a443d;
-}
-
-.attribute-head h3 {
-  font-size: 8.6pt;
-  text-transform: uppercase;
-}
-
-.base {
-  font-size: 7.2pt;
-  text-transform: uppercase;
-  color: #4c4a45;
-}
-
-.value-line {
-  width: 11mm;
-  border-bottom: 0.32mm solid #4a443d;
-  align-self: end;
-}
-
-.attribute-row p {
-  font-size: 7.6pt;
-  line-height: 1.2;
-  margin-top: 1mm;
 }
 
 .is-staerke .marker {
@@ -231,12 +218,14 @@
 
 .damage-boxes {
   display: flex;
-  gap: 0.8mm;
+  gap: 0.5mm;
+  padding: 2mm;
+  width: fit-content;
 }
 
 .mark-box.circle {
-  width: 3.8mm;
-  height: 3.8mm;
+  width: 3mm;
+  aspect-ratio: 1;
   border: 0.3mm solid #2f2a24;
   border-radius: 50%;
 }
