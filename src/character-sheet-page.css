@@ -116,6 +116,13 @@
   margin-left: auto;
 }
 
+.damage-boxes {
+  display: flex;
+  gap: 0.5mm;
+  padding: 2mm;
+  width: fit-content;
+}
+
 .line-fill {
   display: block;
   flex: 1;
@@ -168,8 +175,10 @@
 }
 
 .marker {
-  width: 2.1mm;
-  height: 2.1mm;
+  --marker-size: 4mm;
+
+  width: var(--marker-size);
+  height: var(--marker-size);
   border-radius: 50%;
   border: 0.2mm solid #4a443d;
 }
@@ -206,23 +215,6 @@
   grid-column: 1;
 }
 
-.equipped {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.inventory {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.damage-boxes {
-  display: flex;
-  gap: 0.5mm;
-  padding: 2mm;
-  width: fit-content;
-}
-
 .mark-box.circle {
   width: 3mm;
   aspect-ratio: 1;
@@ -255,6 +247,7 @@
   align-items: end;
   gap: 1mm;
   margin-bottom: 0.9mm;
+  height: 5.5mm;
 }
 
 .list-index {
