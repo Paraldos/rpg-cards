@@ -36,16 +36,16 @@ theme_override_constants/separation = 10
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Headline"
+text = "Rage"
 uppercase = true
 
 [node name="Cost" type="Label" parent="VBoxContainer" unique_id=1965553673]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Kostet: Test"
+text = "Kosten: Passiv"
 
 [node name="Description" type="Label" parent="VBoxContainer" unique_id=1745180408]
 unique_name_in_owner = true
 layout_mode = 2
-text = "text text text text text text text text text text text text text text text text text text text text text text text text "
+text = "Erhalte einen Vorteil auf eine beliebige Stärke Probe."
 autowrap_mode = 3
