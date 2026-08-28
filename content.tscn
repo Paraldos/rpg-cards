@@ -5,9 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://br0vj20ghj2ej" path="res://character_sheet/character_sheet.tscn" id="3_qoh42"]
 [ext_resource type="Resource" uid="uid://dsr0ggaanietq" path="res://character_sheet/wizard.tres" id="4_nrvge"]
 [ext_resource type="PackedScene" uid="uid://brxg66dfgreup" path="res://cards/card_display.tscn" id="5_1w2mm"]
-[ext_resource type="Resource" uid="uid://bwhnvebww4a8o" path="res://cards/bronze_sword.tres" id="6_bgi3g"]
 [ext_resource type="Resource" uid="uid://ercqnl744xco" path="res://cards/bronze_shield.tres" id="7_g02ok"]
 [ext_resource type="Resource" uid="uid://dj03i2emeffv8" path="res://cards/bronze_pushwand.tres" id="7_uryp3"]
+[ext_resource type="Resource" uid="uid://c7m84kdosnsba" path="res://cards/bronze_thieves_tools.tres" id="8_uryp3"]
+[ext_resource type="Resource" uid="uid://dhuahqiij6fpq" path="res://cards/bronze_healing_potion.tres" id="9_qwdn5"]
 
 [node name="Content" type="CanvasLayer" unique_id=1579395896]
 
@@ -92,7 +93,6 @@ columns = 4
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-card = ExtResource("6_bgi3g")
 
 [node name="Card2" parent="VBoxContainer/GridContainer2/Karten1/MarginContainer/GridContainer" unique_id=1145984470 instance=ExtResource("5_1w2mm")]
 layout_mode = 2
@@ -105,3 +105,15 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 card = ExtResource("7_uryp3")
+
+[node name="Card4" parent="VBoxContainer/GridContainer2/Karten1/MarginContainer/GridContainer" unique_id=900395529 instance=ExtResource("5_1w2mm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+card = ExtResource("8_uryp3")
+
+[node name="Card5" parent="VBoxContainer/GridContainer2/Karten1/MarginContainer/GridContainer" unique_id=1489344577 instance=ExtResource("5_1w2mm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+card = ExtResource("9_qwdn5")

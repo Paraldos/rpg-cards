@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://csubdu3rcrv4a"]
+
+[ext_resource type="Script" uid="uid://dsww36ac0hv23" path="res://cards/tag_display.gd" id="1_2l38q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ag6x"]
+content_margin_left = 7.0
+content_margin_top = 3.0
+content_margin_right = 7.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0, 0.1882353)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="TagDisplay" type="Label" unique_id=351489460]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ag6x")
+script = ExtResource("1_2l38q")

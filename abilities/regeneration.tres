@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://i7tn1vkgyfv4"]
+
+[ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_485fp"]
+
+[resource]
+script = ExtResource("1_485fp")
+title = "Regeneration"
+cost = 1
+description = "Du erholst dich von 2 Schaden."
+metadata/_custom_type_script = "uid://6aggftk6n70f"

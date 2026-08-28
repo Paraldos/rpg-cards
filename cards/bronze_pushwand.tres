@@ -14,5 +14,5 @@ title = "Zauberstab"
 skill = 3
 img = SubResource("AtlasTexture_dob3v")
 ability = ExtResource("1_dob3v")
-tags = "Zauber; Fernkampf"
+tags = "Bronze; Waffe; Fernkampf; Magisch"
 metadata/_custom_type_script = "uid://7len8qsmruat"

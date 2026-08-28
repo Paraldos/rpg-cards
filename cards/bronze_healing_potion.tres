@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://dhuahqiij6fpq"]
+
+[ext_resource type="Resource" uid="uid://i7tn1vkgyfv4" path="res://abilities/regeneration.tres" id="1_qv75n"]
+[ext_resource type="Script" uid="uid://7len8qsmruat" path="res://cards/card.gd" id="1_tn51h"]
+[ext_resource type="Texture2D" uid="uid://bgm2tli6y01gg" path="res://items_2.jpg" id="2_5722o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn51h"]
+atlas = ExtResource("2_5722o")
+region = Rect2(536, 264, 144, 208)
+
+[resource]
+script = ExtResource("1_tn51h")
+title = "Heiltrank"
+img = SubResource("AtlasTexture_tn51h")
+ability = ExtResource("1_qv75n")
+tags = "Bronze; Trank"
+metadata/_custom_type_script = "uid://7len8qsmruat"

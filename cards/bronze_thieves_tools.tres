@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://c7m84kdosnsba"]
+
+[ext_resource type="Texture2D" uid="uid://c3a1rs2270gik" path="res://items.jpg" id="1_n234q"]
+[ext_resource type="Resource" uid="uid://dnskdygjhnw5s" path="res://abilities/lockpicking.tres" id="1_wle21"]
+[ext_resource type="Script" uid="uid://7len8qsmruat" path="res://cards/card.gd" id="1_x15v5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n234q"]
+atlas = ExtResource("1_n234q")
+region = Rect2(456, 344, 104, 128)
+
+[resource]
+script = ExtResource("1_x15v5")
+title = "Dietrich"
+skill = 1
+img = SubResource("AtlasTexture_n234q")
+ability = ExtResource("1_wle21")
+tags = "Bronze; Werkzeug"
+metadata/_custom_type_script = "uid://7len8qsmruat"

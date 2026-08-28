@@ -13,5 +13,5 @@ script = ExtResource("1_4uxxn")
 title = "Schild"
 img = SubResource("AtlasTexture_qrbmc")
 ability = ExtResource("1_n3j34")
-tags = "Unhandlich; Rüstung"
+tags = "Bronze; Rüstung; Schild; Unhandlich"
 metadata/_custom_type_script = "uid://7len8qsmruat"

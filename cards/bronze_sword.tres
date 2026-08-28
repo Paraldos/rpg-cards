@@ -13,5 +13,5 @@ script = ExtResource("1_re3ad")
 title = "Schwert"
 img = SubResource("AtlasTexture_vpvsv")
 ability = ExtResource("1_k01dn")
-tags = "Nahkampf"
+tags = "Bronze; Waffe; Nahkampf"
 metadata/_custom_type_script = "uid://7len8qsmruat"

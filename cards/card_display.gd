@@ -8,6 +8,8 @@ extends PanelContainer
 @onready var ability_display: PanelContainer = %AbilityDisplay
 @onready var skill: Label = %Skill
 
+const TAG_DISPLAY = preload("uid://csubdu3rcrv4a")
+
 @export var card : Card:
 	set(value):
 		card = value
@@ -44,6 +46,6 @@ func _update():
 func _add_tags() -> void:
 	print(card.tags.split(";"))
 	for tag in card.tags.split(";"):
-		var label := Label.new()
-		label.text = tag.strip_edges()
-		tag_container.add_child(label)
+		var tag_display := TAG_DISPLAY.instantiate()
+		tag_display.text = tag.strip_edges()
+		tag_container.add_child(tag_display)
