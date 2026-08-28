@@ -3,21 +3,35 @@
 [ext_resource type="Script" uid="uid://bsk1r3o6d13p7" path="res://a4/a_4_page.gd" id="1_4asnp"]
 [ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_pj1re"]
 [ext_resource type="PackedScene" uid="uid://br0vj20ghj2ej" path="res://character_sheet/character_sheet.tscn" id="3_qoh42"]
+[ext_resource type="Resource" uid="uid://dsr0ggaanietq" path="res://character_sheet/wizard.tres" id="4_nrvge"]
+[ext_resource type="PackedScene" uid="uid://brxg66dfgreup" path="res://cards/card_display.tscn" id="5_1w2mm"]
+[ext_resource type="Resource" uid="uid://bwhnvebww4a8o" path="res://cards/bronze_sword.tres" id="6_bgi3g"]
+[ext_resource type="Resource" uid="uid://ercqnl744xco" path="res://cards/bronze_shield.tres" id="7_g02ok"]
 
 [node name="Content" type="CanvasLayer" unique_id=1579395896]
 
-[node name="Test123" type="ColorRect" parent="." unique_id=590299215]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2044919238]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 100
+metadata/_edit_lock_ = true
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1957747340]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 5
+metadata/_edit_lock_ = true
+
+[node name="Klassen1" type="ColorRect" parent="VBoxContainer/GridContainer" unique_id=590299215]
 custom_minimum_size = Vector2(1240, 1754)
 custom_maximum_size = Vector2(1240, 1754)
-offset_left = 100.0
-offset_top = 59.0
-offset_right = 1340.0
-offset_bottom = 1813.0
+layout_mode = 2
 theme = ExtResource("1_pj1re")
 script = ExtResource("1_4asnp")
 metadata/_custom_type_script = "uid://bsk1r3o6d13p7"
 
-[node name="MarginContainer" type="MarginContainer" parent="Test123" unique_id=1114066772]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/GridContainer/Klassen1" unique_id=1114066772]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,25 +43,58 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Test123/MarginContainer" unique_id=1253179617]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/GridContainer/Klassen1/MarginContainer" unique_id=1253179617]
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="CharSheet" parent="Test123/MarginContainer/VBoxContainer" unique_id=722183030 instance=ExtResource("3_qoh42")]
+[node name="CharSheet" parent="VBoxContainer/GridContainer/Klassen1/MarginContainer/VBoxContainer" unique_id=722183030 instance=ExtResource("3_qoh42")]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="CharSheet2" parent="Test123/MarginContainer/VBoxContainer" unique_id=1228946127 instance=ExtResource("3_qoh42")]
+[node name="CharSheet2" parent="VBoxContainer/GridContainer/Klassen1/MarginContainer/VBoxContainer" unique_id=1228946127 instance=ExtResource("3_qoh42")]
 layout_mode = 2
 size_flags_vertical = 3
+character_class = ExtResource("4_nrvge")
 
-[node name="Test234" type="ColorRect" parent="." unique_id=1284779825]
-custom_minimum_size = Vector2(1240, 1754)
-custom_maximum_size = Vector2(1240, 1754)
-offset_left = 3344.0
-offset_top = 1969.0
-offset_right = 4584.0
-offset_bottom = 3723.0
+[node name="GridContainer2" type="GridContainer" parent="VBoxContainer" unique_id=356726585]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 5
+metadata/_edit_lock_ = true
+
+[node name="Karten1" type="ColorRect" parent="VBoxContainer/GridContainer2" unique_id=1871949662]
+custom_minimum_size = Vector2(1754, 1240)
+custom_maximum_size = Vector2(1754, 1240)
+layout_mode = 2
 theme = ExtResource("1_pj1re")
 script = ExtResource("1_4asnp")
 metadata/_custom_type_script = "uid://bsk1r3o6d13p7"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/GridContainer2/Karten1" unique_id=2122739888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/GridContainer2/Karten1/MarginContainer" unique_id=874958184]
+layout_mode = 2
+columns = 4
+
+[node name="Card" parent="VBoxContainer/GridContainer2/Karten1/MarginContainer/GridContainer" unique_id=901832941 instance=ExtResource("5_1w2mm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+card = ExtResource("6_bgi3g")
+
+[node name="Card2" parent="VBoxContainer/GridContainer2/Karten1/MarginContainer/GridContainer" unique_id=1145984470 instance=ExtResource("5_1w2mm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+card = ExtResource("7_g02ok")

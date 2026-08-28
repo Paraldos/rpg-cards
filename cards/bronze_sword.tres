@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://bwhnvebww4a8o"]
+
+[ext_resource type="Resource" uid="uid://yoa6b88jexjk" path="res://abilities/character_rage.tres" id="1_k01dn"]
+[ext_resource type="Script" uid="uid://7len8qsmruat" path="res://cards/card.gd" id="1_re3ad"]
+[ext_resource type="Texture2D" uid="uid://bgm2tli6y01gg" path="res://items_2.jpg" id="2_gjfky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpvsv"]
+atlas = ExtResource("2_gjfky")
+region = Rect2(56, 32, 122, 446)
+
+[resource]
+script = ExtResource("1_re3ad")
+title = "Schwert"
+skill = 0
+img = SubResource("AtlasTexture_vpvsv")
+ability = ExtResource("1_k01dn")
+metadata/_custom_type_script = "uid://7len8qsmruat"

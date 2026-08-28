@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterClass" format=3 uid="uid://dsr0ggaanietq"]
+
+[ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_vskbq"]
+[ext_resource type="Script" uid="uid://4428p6trdevq" path="res://character_sheet/character_class.gd" id="2_iforn"]
+[ext_resource type="Resource" uid="uid://obnhh0kdyl4e" path="res://abilities/character_clairvoyance.tres" id="2_mc60m"]
+[ext_resource type="Texture2D" uid="uid://dhp8qou85o4ai" path="res://classes.jpg" id="2_tqoon"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kc5u"]
+atlas = ExtResource("2_tqoon")
+region = Rect2(549, 450, 187, 197)
+
+[resource]
+script = ExtResource("2_iforn")
+title = "Zauberer"
+max_health = 3
+img = SubResource("AtlasTexture_0kc5u")
+abilities = Array[ExtResource("1_vskbq")]([ExtResource("2_mc60m")])
+charm = 2
+wits = 3
+metadata/_custom_type_script = "uid://4428p6trdevq"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://446umbmhdpke"]
+
+[ext_resource type="Texture2D" uid="uid://dqo4m4u7e1bep" path="res://character_sheet/heart.png" id="1_8hcqy"]
+
+[node name="Heart" type="TextureRect" unique_id=420292230]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(50, 50)
+texture = ExtResource("1_8hcqy")
+expand_mode = 5
+stretch_mode = 5

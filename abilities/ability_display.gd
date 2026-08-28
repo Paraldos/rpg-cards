@@ -8,12 +8,12 @@ extends PanelContainer
 @export var ability: Ability:
 	set(value):
 		ability = value
-		_update_ability()
+		_update()
 
 func _ready() -> void:
-	_update_ability()
+	_update()
 
-func _update_ability() -> void:
+func _update() -> void:
 	if not is_node_ready():
 		await ready
 	if ability == null:

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://obnhh0kdyl4e"]
+
+[ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_s4ihq"]
+
+[resource]
+script = ExtResource("1_s4ihq")
+title = "Hellsicht"
+cost = 2
+description = "Der Erzähler beantwortet drei Ja/Nein-Fragen zu einem Objekt oder Ort."
+metadata/_custom_type_script = "uid://6aggftk6n70f"

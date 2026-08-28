@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://brxg66dfgreup"]
+
+[ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_ivai2"]
+[ext_resource type="Script" uid="uid://cpgoccn3ok11x" path="res://cards/card_display.gd" id="2_k6k2m"]
+[ext_resource type="Theme" uid="uid://b68cax56mc5ab" path="res://H2.tres" id="3_2ffn3"]
+[ext_resource type="Resource" uid="uid://bwhnvebww4a8o" path="res://cards/bronze_sword.tres" id="3_ychx0"]
+[ext_resource type="PackedScene" uid="uid://b786uabnbl0m2" path="res://abilities/ability_display.tscn" id="4_ychx0"]
+[ext_resource type="Texture2D" uid="uid://bgm2tli6y01gg" path="res://items_2.jpg" id="5_kwjbw"]
+[ext_resource type="Resource" uid="uid://yoa6b88jexjk" path="res://abilities/character_rage.tres" id="7_1ldxn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpvsv"]
+atlas = ExtResource("5_kwjbw")
+region = Rect2(56, 32, 122, 446)
+
+[node name="Card" type="PanelContainer" unique_id=901832941]
+custom_minimum_size = Vector2(411, 568)
+custom_maximum_size = Vector2(411, 568)
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_ivai2")
+script = ExtResource("2_k6k2m")
+card = ExtResource("3_ychx0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1195899983]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=936508691]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=187854856]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("3_2ffn3")
+text = "Schwert"
+
+[node name="Skill" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=210758400]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("3_2ffn3")
+text = "Muckis"
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1812480108]
+layout_mode = 2
+
+[node name="Img" type="TextureRect" parent="VBoxContainer" unique_id=882731744]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 300)
+custom_maximum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_vpvsv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AbilityDisplay" parent="VBoxContainer" unique_id=1482443341 instance=ExtResource("4_ychx0")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+ability = ExtResource("7_1ldxn")

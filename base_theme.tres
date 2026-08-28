@@ -4,10 +4,33 @@
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_0kc5u"]
 thickness = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrvge"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6qegq"]
+thickness = 4
 vertical = true
 
 [resource]
 default_font = ExtResource("1_6qegq")
 default_font_size = 20
+HBoxContainer/constants/separation = 25
+HSeparator/styles/separator = SubResource("StyleBoxLine_0kc5u")
 Label/colors/font_color = Color(0, 0, 0, 1)
-VSeparator/styles/separator = SubResource("StyleBoxLine_0kc5u")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_nrvge")
+VBoxContainer/constants/separation = 20
+VSeparator/styles/separator = SubResource("StyleBoxLine_6qegq")
