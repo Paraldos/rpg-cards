@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddwfjphsifm0e"
-path="res://.godot/imported/maxresdefault.jpg-22355f9a31ba67f87dd660e1e919c886.ctex"
+path="res://.godot/imported/barbar.jpg-d664c74a6b143660a627ac59335ac85a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maxresdefault.jpg"
-dest_files=["res://.godot/imported/maxresdefault.jpg-22355f9a31ba67f87dd660e1e919c886.ctex"]
+source_file="res://barbar.jpg"
+dest_files=["res://.godot/imported/barbar.jpg-d664c74a6b143660a627ac59335ac85a.ctex"]
 
 [params]
 

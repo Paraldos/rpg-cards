@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b786uabnbl0m2"]
+
+[ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_ewlf4"]
+[ext_resource type="Script" uid="uid://l2j076htffxx" path="res://abilities/ability_display.gd" id="2_hxx7r"]
+[ext_resource type="Resource" uid="uid://yoa6b88jexjk" path="res://abilities/rage.tres" id="3_mqe4f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50yph"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 2
+border_width_right = 5
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="AbilityDisplay" type="PanelContainer" unique_id=1482443341]
+offset_right = 585.0
+offset_bottom = 151.0
+theme = ExtResource("1_ewlf4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_50yph")
+script = ExtResource("2_hxx7r")
+ability = ExtResource("3_mqe4f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1888488429]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=508165719]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Headline"
+uppercase = true
+
+[node name="Cost" type="Label" parent="VBoxContainer" unique_id=1965553673]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Kostet: Test"
+
+[node name="Description" type="Label" parent="VBoxContainer" unique_id=1745180408]
+unique_name_in_owner = true
+layout_mode = 2
+text = "text text text text text text text text text text text text text text text text text text text text text text text text "
+autowrap_mode = 3

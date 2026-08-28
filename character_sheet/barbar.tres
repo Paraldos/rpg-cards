@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CharacterClass" format=3 uid="uid://6xfdixxl0hqw"]
+
+[ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_qphqm"]
+[ext_resource type="Texture2D" uid="uid://ddwfjphsifm0e" path="res://barbar.jpg" id="2_w12rw"]
+[ext_resource type="Script" uid="uid://4428p6trdevq" path="res://character_sheet/character_class.gd" id="3_obdxi"]
+
+[resource]
+script = ExtResource("3_obdxi")
+title = "Barbar"
+max_health = 5
+img = ExtResource("2_w12rw")
+metadata/_custom_type_script = "uid://4428p6trdevq"

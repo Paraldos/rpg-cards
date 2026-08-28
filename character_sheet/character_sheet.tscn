@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://br0vj20ghj2ej"]
 
 [ext_resource type="Script" uid="uid://d08thar1qf2wx" path="res://character_sheet/character_sheet.gd" id="1_g6x8y"]
-[ext_resource type="Texture2D" uid="uid://ddwfjphsifm0e" path="res://maxresdefault.jpg" id="1_jum52"]
+[ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_u3tpo"]
+[ext_resource type="Texture2D" uid="uid://ddwfjphsifm0e" path="res://barbar.jpg" id="2_g6x8y"]
+[ext_resource type="Resource" uid="uid://6xfdixxl0hqw" path="res://character_sheet/barbar.tres" id="2_ldr68"]
+[ext_resource type="PackedScene" uid="uid://b786uabnbl0m2" path="res://abilities/ability_display.tscn" id="5_fc5gk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kc5u"]
 content_margin_left = 25.0
-content_margin_top = 25.0
+content_margin_top = 50.0
 content_margin_right = 25.0
-content_margin_bottom = 25.0
+content_margin_bottom = 50.0
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 4
 border_width_top = 4
@@ -23,39 +26,42 @@ corner_radius_bottom_left = 15
 custom_minimum_size = Vector2(1114, 814)
 offset_right = 429.0
 offset_bottom = 123.0
+theme = ExtResource("1_u3tpo")
 theme_override_styles/panel = SubResource("StyleBoxFlat_0kc5u")
 script = ExtResource("1_g6x8y")
+character_class = ExtResource("2_ldr68")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=264053261]
 layout_mode = 2
+theme_override_constants/separation = 50
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=1932449270]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=55278382]
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=55278382]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Barbar"
+text = "Klasse"
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2" unique_id=411105347]
+[node name="Img" type="TextureRect" parent="HBoxContainer/VBoxContainer2" unique_id=411105347]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_jum52")
+texture = ExtResource("2_g6x8y")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer" unique_id=711721444]
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=870799324]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1274315794]
+[node name="AbilityDisplay" parent="HBoxContainer/VBoxContainer" unique_id=1482443341 instance=ExtResource("5_fc5gk")]
 layout_mode = 2
-text = "Rage"
-
-[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=394957198]
-layout_mode = 2
-text = "Erschöpfe irgendeine Karte"
