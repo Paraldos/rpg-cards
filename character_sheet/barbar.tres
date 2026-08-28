@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_qphqm"]
 [ext_resource type="Resource" uid="uid://yoa6b88jexjk" path="res://abilities/character_rage.tres" id="2_w12rw"]
+[ext_resource type="Resource" uid="uid://dpsv3dv767eq8" path="res://abilities/character_bloodthirsty.tres" id="3_ev8bo"]
 [ext_resource type="Script" uid="uid://4428p6trdevq" path="res://character_sheet/character_class.gd" id="3_obdxi"]
 [ext_resource type="Texture2D" uid="uid://dhp8qou85o4ai" path="res://classes.jpg" id="3_w12rw"]
 
@@ -14,7 +15,7 @@ script = ExtResource("3_obdxi")
 title = "Barbar"
 max_health = 5
 img = SubResource("AtlasTexture_50yph")
-abilities = Array[ExtResource("1_qphqm")]([ExtResource("2_w12rw")])
+abilities = Array[ExtResource("1_qphqm")]([ExtResource("2_w12rw"), ExtResource("3_ev8bo")])
 strength = 3
 dex = 2
 metadata/_custom_type_script = "uid://4428p6trdevq"

@@ -6,3 +6,4 @@ class_name Card
 @export var skill := Skills.SKILLS.STRENGTH
 @export var img : Texture2D
 @export var ability : Ability
+@export var tags : String = ""

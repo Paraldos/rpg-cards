@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://dpsv3dv767eq8"]
+
+[ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_a7oy0"]
+
+[resource]
+script = ExtResource("1_a7oy0")
+title = "Blutrausch"
+description = "Führe sofort eine weitere Attacke aus, nachdem du einen Gegner ausgeschaltet hast."
+metadata/_custom_type_script = "uid://6aggftk6n70f"

@@ -27,6 +27,42 @@ corner_radius_bottom_left = 15
 atlas = ExtResource("4_fc5gk")
 region = Rect2(186, 0, 177, 199)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcdav"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.9490196, 0.15294118, 0.21176471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_luk3r"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.21960784, 0.6901961, 0.12156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdmsv"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.9490196, 0.76862746, 0.1254902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fni2m"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.08235294, 0.5137255, 0.827451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="CharSheet" type="PanelContainer" unique_id=722183030]
 custom_minimum_size = Vector2(1114, 814)
 offset_right = 429.0
@@ -63,8 +99,8 @@ stretch_mode = 5
 
 [node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer2" unique_id=867299319]
 layout_mode = 2
-theme_override_constants/h_separation = 25
-theme_override_constants/v_separation = 15
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
 columns = 2
 
 [node name="Strength" type="Label" parent="HBoxContainer/VBoxContainer2/GridContainer" unique_id=475742302]
@@ -72,6 +108,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fc5gk")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_wcdav")
 text = "Muckis: 3"
 horizontal_alignment = 1
 
@@ -80,6 +118,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fc5gk")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_luk3r")
 text = "Tricks: 2"
 horizontal_alignment = 1
 
@@ -88,6 +128,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fc5gk")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_hdmsv")
 text = "Charm: 1"
 horizontal_alignment = 1
 
@@ -96,6 +138,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fc5gk")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fni2m")
 text = "Köpfchen: 1"
 horizontal_alignment = 1
 

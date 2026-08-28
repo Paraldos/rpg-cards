@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://brxg66dfgreup" path="res://cards/card_display.tscn" id="5_1w2mm"]
 [ext_resource type="Resource" uid="uid://bwhnvebww4a8o" path="res://cards/bronze_sword.tres" id="6_bgi3g"]
 [ext_resource type="Resource" uid="uid://ercqnl744xco" path="res://cards/bronze_shield.tres" id="7_g02ok"]
+[ext_resource type="Resource" uid="uid://dj03i2emeffv8" path="res://cards/bronze_pushwand.tres" id="7_uryp3"]
 
 [node name="Content" type="CanvasLayer" unique_id=1579395896]
 
@@ -98,3 +99,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 card = ExtResource("7_g02ok")
+
+[node name="Card3" parent="VBoxContainer/GridContainer2/Karten1/MarginContainer/GridContainer" unique_id=1974603398 instance=ExtResource("5_1w2mm")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+card = ExtResource("7_uryp3")

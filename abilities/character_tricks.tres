@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://bsb80pl6k3es2"]
+
+[ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_nqpdu"]
+
+[resource]
+script = ExtResource("1_nqpdu")
+title = "Tricks:"
+description = "Du kannst kleine magische
+Effekte erzeugen, z.B. Fenster auf Distanz
+öffnen oder den Namen einer Person erraten."
+metadata/_custom_type_script = "uid://6aggftk6n70f"

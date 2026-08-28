@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://byqc4hvgh2ol7"]
+
+[ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_f5s5v"]
+
+[resource]
+script = ExtResource("1_f5s5v")
+title = "Stoß"
+cost = 1
+description = "Stoße eine Person oder einen Gegenstand (max. 150 kg) W6 Meter von dir weg. Zählt als Zauberangriff."
+metadata/_custom_type_script = "uid://6aggftk6n70f"

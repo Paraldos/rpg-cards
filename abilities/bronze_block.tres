@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://rjqym773ppyx"]
+
+[ext_resource type="Script" uid="uid://6aggftk6n70f" path="res://abilities/ability.gd" id="1_pjfue"]
+
+[resource]
+script = ExtResource("1_pjfue")
+title = "Blocken"
+cost = 1
+description = "Du erhältst einen Vorteil auf eine Verteidigung."
+metadata/_custom_type_script = "uid://6aggftk6n70f"

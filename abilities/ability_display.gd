@@ -24,3 +24,8 @@ func _update() -> void:
 		title_label.text = ability.title
 		cost_label.text = "Kosten: %s" % ability.get_cost_text()
 		description_label.text = ability.description
+	custom_minimum_size.y = 0
+	call_deferred("_update_height")
+
+func _update_height() -> void:
+	custom_minimum_size.y = get_combined_minimum_size().y

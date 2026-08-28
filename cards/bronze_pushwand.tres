@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://dj03i2emeffv8"]
+
+[ext_resource type="Resource" uid="uid://byqc4hvgh2ol7" path="res://abilities/push.tres" id="1_dob3v"]
+[ext_resource type="Texture2D" uid="uid://bgm2tli6y01gg" path="res://items_2.jpg" id="1_hjvu5"]
+[ext_resource type="Script" uid="uid://7len8qsmruat" path="res://cards/card.gd" id="1_jj68j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dob3v"]
+atlas = ExtResource("1_hjvu5")
+region = Rect2(536, 32, 136, 208)
+
+[resource]
+script = ExtResource("1_jj68j")
+title = "Zauberstab"
+skill = 3
+img = SubResource("AtlasTexture_dob3v")
+ability = ExtResource("1_dob3v")
+tags = "Zauber; Fernkampf"
+metadata/_custom_type_script = "uid://7len8qsmruat"

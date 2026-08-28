@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://4428p6trdevq" path="res://character_sheet/character_class.gd" id="2_iforn"]
 [ext_resource type="Resource" uid="uid://obnhh0kdyl4e" path="res://abilities/character_clairvoyance.tres" id="2_mc60m"]
 [ext_resource type="Texture2D" uid="uid://dhp8qou85o4ai" path="res://classes.jpg" id="2_tqoon"]
+[ext_resource type="Resource" uid="uid://bsb80pl6k3es2" path="res://abilities/character_tricks.tres" id="3_mc60m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0kc5u"]
 atlas = ExtResource("2_tqoon")
@@ -14,7 +15,7 @@ script = ExtResource("2_iforn")
 title = "Zauberer"
 max_health = 3
 img = SubResource("AtlasTexture_0kc5u")
-abilities = Array[ExtResource("1_vskbq")]([ExtResource("2_mc60m")])
+abilities = Array[ExtResource("1_vskbq")]([ExtResource("2_mc60m"), ExtResource("3_mc60m")])
 charm = 2
 wits = 3
 metadata/_custom_type_script = "uid://4428p6trdevq"
