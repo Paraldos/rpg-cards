@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://kla6u4i15u3v"]
+
+[ext_resource type="Script" uid="uid://bsk1r3o6d13p7" path="res://a4/a_4_page.gd" id="1_4asnp"]
+[ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_pj1re"]
+[ext_resource type="PackedScene" uid="uid://br0vj20ghj2ej" path="res://character_sheet/character_sheet.tscn" id="3_qoh42"]
+
+[node name="Content" type="CanvasLayer" unique_id=1579395896]
+
+[node name="Test123" type="ColorRect" parent="." unique_id=590299215]
+custom_minimum_size = Vector2(1240, 1754)
+custom_maximum_size = Vector2(1240, 1754)
+offset_left = 100.0
+offset_top = 59.0
+offset_right = 1340.0
+offset_bottom = 1813.0
+theme = ExtResource("1_pj1re")
+script = ExtResource("1_4asnp")
+metadata/_custom_type_script = "uid://bsk1r3o6d13p7"
+
+[node name="MarginContainer" type="MarginContainer" parent="Test123" unique_id=1114066772]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Test123/MarginContainer" unique_id=1253179617]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="CharSheet" parent="Test123/MarginContainer/VBoxContainer" unique_id=722183030 instance=ExtResource("3_qoh42")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CharSheet2" parent="Test123/MarginContainer/VBoxContainer" unique_id=1228946127 instance=ExtResource("3_qoh42")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Test234" type="ColorRect" parent="." unique_id=1284779825]
+custom_minimum_size = Vector2(1240, 1754)
+custom_maximum_size = Vector2(1240, 1754)
+offset_left = 3344.0
+offset_top = 1969.0
+offset_right = 4584.0
+offset_bottom = 3723.0
+theme = ExtResource("1_pj1re")
+script = ExtResource("1_4asnp")
+metadata/_custom_type_script = "uid://bsk1r3o6d13p7"

@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://boyufawc1em0m"]
+
+[ext_resource type="FontFile" uid="uid://3w1m0n3hd7ea" path="res://Baby Doll.otf" id="1_6qegq"]
+
+[resource]
+default_font = ExtResource("1_6qegq")
+default_font_size = 25
+Label/colors/font_color = Color(0, 0, 0, 1)

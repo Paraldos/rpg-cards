@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cgdr5vk8wfts7"]
+
+[ext_resource type="Script" uid="uid://bsk1r3o6d13p7" path="res://a4/a_4_page.gd" id="1_2w4nk"]
+[ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_igkor"]
+
+[node name="A4Page" type="ColorRect" unique_id=1336709957]
+offset_right = 1240.0
+offset_bottom = 1754.0
+theme = ExtResource("1_igkor")
+script = ExtResource("1_2w4nk")
