@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bh1818ohxvxd5"]
+
+[ext_resource type="Script" uid="uid://bqtrkbqthsqy8" path="res://alt_character_sheet/skills.gd" id="1_4eih1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1brag"]
+content_margin_left = 15.0
+content_margin_top = 4.0
+content_margin_right = 15.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 30
+corner_detail = 1
+
+[node name="Skills" type="VBoxContainer" unique_id=853970224]
+custom_minimum_size = Vector2(250, 0)
+size_flags_horizontal = 0
+theme_override_constants/separation = 15
+script = ExtResource("1_4eih1")
+
+[node name="Label" type="Label" parent="." unique_id=1464914334]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_1brag")
+text = "Fertigkeiten"
+uppercase = true
+
+[node name="SkillsContainer" type="VBoxContainer" parent="." unique_id=752603393]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10

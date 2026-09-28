@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://dj03i2emeffv8" path="res://cards/bronze_pushwand.tres" id="7_uryp3"]
 [ext_resource type="Resource" uid="uid://c7m84kdosnsba" path="res://cards/bronze_thieves_tools.tres" id="8_uryp3"]
 [ext_resource type="Resource" uid="uid://dhuahqiij6fpq" path="res://cards/bronze_healing_potion.tres" id="9_qwdn5"]
+[ext_resource type="PackedScene" uid="uid://bek6jl200uatt" path="res://alt_character_sheet/alt_character_sheet.tscn" id="10_356ut"]
 
 [node name="Content" type="CanvasLayer" unique_id=1579395896]
 
@@ -117,3 +118,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 card = ExtResource("9_qwdn5")
+
+[node name="GridContainer3" type="GridContainer" parent="VBoxContainer" unique_id=1153237916]
+layout_mode = 2
+
+[node name="A4Page" parent="VBoxContainer/GridContainer3" unique_id=595310726 instance=ExtResource("10_356ut")]
+layout_mode = 2

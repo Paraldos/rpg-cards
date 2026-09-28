@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b0a8c2vk8db0b"]
+
+[ext_resource type="Script" uid="uid://bhe210gf4eri1" path="res://alt_character_sheet/info_line.gd" id="1_qat74"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kc5u"]
+bg_color = Color(1, 1, 1, 0)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="InfoLine" type="HBoxContainer" unique_id=1234288085]
+offset_right = 1027.0
+offset_bottom = 128.0
+size_flags_horizontal = 3
+alignment = 2
+script = ExtResource("1_qat74")
+
+[node name="InfoName" type="Label" parent="." unique_id=1100507296]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+vertical_alignment = 2
+
+[node name="Underscore" type="Label" parent="." unique_id=650328584]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_0kc5u")
+horizontal_alignment = 2
+vertical_alignment = 1

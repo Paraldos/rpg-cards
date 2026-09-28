@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cqmftbh5uj3r1"]
+
+[ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_wq4he"]
+[ext_resource type="Script" uid="uid://c3qu2kd7i063t" path="res://alt_character_sheet/attribut.gd" id="2_042ph"]
+[ext_resource type="PackedScene" uid="uid://cv7xs5vsfjgv1" path="res://alt_character_sheet/box.tscn" id="3_yg3wv"]
+
+[node name="Attribut" type="HBoxContainer" unique_id=412544864]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_wq4he")
+theme_override_constants/separation = 15
+script = ExtResource("2_042ph")
+
+[node name="Label" type="Label" parent="." unique_id=341772332]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=1019825403]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_constants/separation = -18
+
+[node name="HBoxContainer" type="GridContainer" parent="VBoxContainer3" unique_id=1944327150]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 9
+
+[node name="CenterContainer" parent="VBoxContainer3/HBoxContainer" unique_id=1351700141 instance=ExtResource("3_yg3wv")]
+layout_mode = 2
+on = true
+
+[node name="CenterContainer5" parent="VBoxContainer3/HBoxContainer" unique_id=1147412953 instance=ExtResource("3_yg3wv")]
+layout_mode = 2
+
+[node name="CenterContainer6" parent="VBoxContainer3/HBoxContainer" unique_id=348879929 instance=ExtResource("3_yg3wv")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer3/HBoxContainer" unique_id=1531911209]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="CenterContainer7" parent="VBoxContainer3/HBoxContainer" unique_id=1478666816 instance=ExtResource("3_yg3wv")]
+layout_mode = 2
+
+[node name="CenterContainer8" parent="VBoxContainer3/HBoxContainer" unique_id=473702614 instance=ExtResource("3_yg3wv")]
+layout_mode = 2
+
+[node name="CenterContainer2" parent="VBoxContainer3/HBoxContainer" unique_id=440422810 instance=ExtResource("3_yg3wv")]
+layout_mode = 2

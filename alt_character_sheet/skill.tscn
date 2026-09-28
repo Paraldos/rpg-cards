@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://i2s2udphxnrr"]
+
+[ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_uh70n"]
+[ext_resource type="Script" uid="uid://c3qu2kd7i063t" path="res://alt_character_sheet/attribut.gd" id="2_hetvr"]
+
+[node name="Skill" type="HBoxContainer" unique_id=412544864]
+theme = ExtResource("1_uh70n")
+theme_override_constants/separation = 5
+script = ExtResource("2_hetvr")
+
+[node name="Label" type="Label" parent="." unique_id=341772332]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Test 123"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=818200432]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CenterContainer" unique_id=219948534]
+layout_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="CenterContainer/Control" unique_id=1393158214]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-12, 0, 0, -12, 12, 0, 0, 12)
+
+[node name="Line2D" type="Line2D" parent="CenterContainer/Control" unique_id=2038451602]
+points = PackedVector2Array(-12, 0, 0, -12, 12, 0, 0, 12)
+closed = true
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=618886047]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CenterContainer2" unique_id=997887150]
+layout_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="CenterContainer2/Control" unique_id=537686949]
+visible = false
+color = Color(0.38431373, 0.2509804, 0.14509805, 1)
+polygon = PackedVector2Array(-12, 0, 0, -12, 12, 0, 0, 12)
+
+[node name="Line2D" type="Line2D" parent="CenterContainer2/Control" unique_id=1963187619]
+points = PackedVector2Array(-12, 0, 0, -12, 12, 0, 0, 12)
+closed = true
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer3" type="CenterContainer" parent="." unique_id=1599837966]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CenterContainer3" unique_id=1527456808]
+layout_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="CenterContainer3/Control" unique_id=613966782]
+visible = false
+color = Color(0.38431373, 0.2509804, 0.14509805, 1)
+polygon = PackedVector2Array(-12, 0, 0, -12, 12, 0, 0, 12)
+
+[node name="Line2D" type="Line2D" parent="CenterContainer3/Control" unique_id=271944849]
+points = PackedVector2Array(-12, 0, 0, -12, 12, 0, 0, 12)
+closed = true
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer4" type="CenterContainer" parent="." unique_id=1757773620]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CenterContainer4" unique_id=97162960]
+layout_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="CenterContainer4/Control" unique_id=1124844497]
+visible = false
+color = Color(0.38431373, 0.2509804, 0.14509805, 1)
+polygon = PackedVector2Array(-12, 0, 0, -12, 12, 0, 0, 12)
+
+[node name="Line2D" type="Line2D" parent="CenterContainer4/Control" unique_id=1631527745]
+points = PackedVector2Array(-12, 0, 0, -12, 12, 0, 0, 12)
+closed = true
+width = 2.0
+default_color = Color(0, 0, 0, 1)

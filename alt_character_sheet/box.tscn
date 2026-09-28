@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cv7xs5vsfjgv1"]
+
+[ext_resource type="Script" uid="uid://bwbipep58lon6" path="res://alt_character_sheet/box.gd" id="1_q44wb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kc5u"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="Box" type="PanelContainer" unique_id=1147412953]
+custom_minimum_size = Vector2(24, 24)
+offset_right = 24.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0kc5u")
+script = ExtResource("1_q44wb")
+
+[node name="Center" type="ColorRect" parent="." unique_id=1179695743]
+visible = false
+layout_mode = 2

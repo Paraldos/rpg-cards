@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cjla8rd15tkw4"]
+
+[ext_resource type="Script" uid="uid://c3sp0e08g2t2g" path="res://alt_character_sheet/info_line_2.gd" id="1_vaqww"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_0kc5u"]
+thickness = 2
+
+[node name="InfoLine2" type="Control" unique_id=370259719]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 243.0
+offset_bottom = 35.0
+script = ExtResource("1_vaqww")
+
+[node name="Label2" type="Label" parent="." unique_id=1259707880]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -17.0
+offset_right = 53.0
+grow_vertical = 0
+text = "Beruf:"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=433059777]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/separator = SubResource("StyleBoxLine_0kc5u")

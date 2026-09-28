@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://degwdb6eeyw5l"]
+
+[ext_resource type="Script" uid="uid://puhx7vrp542k" path="res://alt_character_sheet/merkmal.gd" id="1_5ve4h"]
+
+[node name="Merkmal" type="HBoxContainer" unique_id=1290268202]
+offset_right = 306.0
+offset_bottom = 59.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+script = ExtResource("1_5ve4h")
+label_txt = "Test"
+amount = 3
+
+[node name="Label" type="Label" parent="." unique_id=1676833527]
+layout_mode = 2
+text = "Test"
+
+[node name="BoxContainer" type="GridContainer" parent="." unique_id=569989060]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+columns = 12

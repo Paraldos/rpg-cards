@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://bek6jl200uatt"]
+
+[ext_resource type="Theme" uid="uid://boyufawc1em0m" path="res://base_theme.tres" id="1_iflrd"]
+[ext_resource type="Script" uid="uid://bsk1r3o6d13p7" path="res://a4/a_4_page.gd" id="1_w25sm"]
+[ext_resource type="FontFile" uid="uid://b7iv3pvru7f5b" path="res://Bangers-Regular.ttf" id="3_1brag"]
+[ext_resource type="PackedScene" uid="uid://b0a8c2vk8db0b" path="res://alt_character_sheet/info_line.tscn" id="3_pdhkf"]
+[ext_resource type="PackedScene" uid="uid://cjla8rd15tkw4" path="res://alt_character_sheet/info_line_2.tscn" id="5_b634a"]
+[ext_resource type="PackedScene" uid="uid://degwdb6eeyw5l" path="res://alt_character_sheet/merkmal.tscn" id="5_twcs2"]
+[ext_resource type="PackedScene" uid="uid://bh1818ohxvxd5" path="res://alt_character_sheet/skills.tscn" id="6_1brag"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6q4qt"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+
+[node name="A4Page" type="ColorRect" unique_id=595310726]
+custom_minimum_size = Vector2(1754, 1240)
+custom_maximum_size = Vector2(1754, 1240)
+offset_right = 1754.0
+offset_bottom = 1240.0
+theme = ExtResource("1_iflrd")
+script = ExtResource("1_w25sm")
+metadata/_custom_type_script = "uid://bsk1r3o6d13p7"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2122189714]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 90
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 90
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=19390451]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="CharacterSheet" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1452230347]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/CharacterSheet" unique_id=206705136]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_1brag")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_6q4qt")
+text = "Bold Legends"
+horizontal_alignment = 1
+
+[node name="InfoLine" parent="MarginContainer/HBoxContainer/CharacterSheet" unique_id=1234288085 instance=ExtResource("3_pdhkf")]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+label_txt = "Name:"
+
+[node name="InfoLine3" parent="MarginContainer/HBoxContainer/CharacterSheet" unique_id=1485036062 instance=ExtResource("3_pdhkf")]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+label_txt = "Beschreibung:"
+
+[node name="InfoLine2" parent="MarginContainer/HBoxContainer/CharacterSheet" unique_id=769292550 instance=ExtResource("3_pdhkf")]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+label_txt = "Schwächen / Traumas:"
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/CharacterSheet" unique_id=810669519]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/CharacterSheet" unique_id=1257467633]
+layout_mode = 2
+
+[node name="Merkmal" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer2" unique_id=1290268202 instance=ExtResource("5_twcs2")]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 1
+label_txt = "LP"
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer2" unique_id=1912682290]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Merkmal2" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer2" unique_id=52918446 instance=ExtResource("5_twcs2")]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 1
+alignment = 1
+label_txt = "AP"
+amount = 6
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer2" unique_id=850408711]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfoLine" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer2" unique_id=91941032 instance=ExtResource("3_pdhkf")]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+label_txt = "EP"
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer/CharacterSheet" unique_id=1611348966]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/CharacterSheet" unique_id=2058192913]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Skills" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer" unique_id=853970224 instance=ExtResource("6_1brag")]
+layout_mode = 2
+skills = Array[String](["Bildung", "Charme", "Diebstahl", "Fahren", "Fernkampf", "Gassenwissen", "Geschick", "Kraft", "Medizin", "Willenskraft", "Nahkampf", "Spürsinn", "Überleben", "Schleichen"])
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer" unique_id=373824847]
+layout_mode = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer" unique_id=361625384]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="PanelContainer" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4" unique_id=540473417]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer2" unique_id=1866945507]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer2/VBoxContainer" unique_id=1247020183]
+layout_mode = 2
+text = "Aspekte (+2W)"
+uppercase = true
+
+[node name="InfoLine2" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer2/VBoxContainer" unique_id=370259719 instance=ExtResource("5_b634a")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InfoLine3" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer2/VBoxContainer" unique_id=1809020228 instance=ExtResource("5_b634a")]
+layout_mode = 2
+
+[node name="InfoLine6" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer2/VBoxContainer" unique_id=2115137864 instance=ExtResource("5_b634a")]
+layout_mode = 2
+
+[node name="InfoLine5" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer2/VBoxContainer" unique_id=2135550987 instance=ExtResource("5_b634a")]
+layout_mode = 2
+
+[node name="InfoLine4" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer2/VBoxContainer" unique_id=551163344 instance=ExtResource("5_b634a")]
+layout_mode = 2
+
+[node name="Label15" type="Label" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer2/VBoxContainer" unique_id=860451361]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Aspekte beschreiben besondere Fähigkeiten oder Fachgebiete, etwa Archäologe oder Fliegerass. Sie können aber auch übernatürliche Kräfte wie Superstärke oder Telepathie verkörpern."
+autowrap_mode = 3
+
+[node name="VBoxContainer3" type="PanelContainer" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4" unique_id=1261824447]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer3" unique_id=577186436]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer3/VBoxContainer" unique_id=125153503]
+layout_mode = 2
+text = "Ressourcen (+2W)"
+uppercase = true
+
+[node name="InfoLine2" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer3/VBoxContainer" unique_id=1889552193 instance=ExtResource("5_b634a")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InfoLine3" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer3/VBoxContainer" unique_id=1376750874 instance=ExtResource("5_b634a")]
+layout_mode = 2
+
+[node name="InfoLine5" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer3/VBoxContainer" unique_id=2060785517 instance=ExtResource("5_b634a")]
+layout_mode = 2
+
+[node name="InfoLine6" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer3/VBoxContainer" unique_id=468655216 instance=ExtResource("5_b634a")]
+layout_mode = 2
+
+[node name="InfoLine4" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer3/VBoxContainer" unique_id=515801606 instance=ExtResource("5_b634a")]
+layout_mode = 2
+
+[node name="Label16" type="Label" parent="MarginContainer/HBoxContainer/CharacterSheet/HBoxContainer/VBoxContainer4/VBoxContainer3/VBoxContainer" unique_id=1526284761]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Ressourcen sind markante Gegenstände, Kontakte oder andere Mittel, auf die dein Held dauerhaft Zugriff hat, etwa eine Tommy Gun, Dynamit, Kontakte zur Polizei oder ein gewaltiges Vermögen."
+autowrap_mode = 3
+
+[node name="Control" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1888395777]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Control" unique_id=114267985]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Control/VBoxContainer" unique_id=1084750000]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Notizen"
+uppercase = true
